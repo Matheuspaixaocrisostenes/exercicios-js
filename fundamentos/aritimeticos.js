@@ -5,3 +5,5 @@ const sub = b-a
 const mult = b*c
 const div = c/d
 const modulo = a % b
+
+console.log(soma,sub,mult,div,modulo);
