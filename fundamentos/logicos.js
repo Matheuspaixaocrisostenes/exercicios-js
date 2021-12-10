@@ -7,4 +7,4 @@ function compras(trabalho1,trabalho2){
     return { comprarSorvete,comprarTv50,comprarTv32,manterSaudavel }
 }
 
-console.log(comprar(true, false));
+console.log(compras(true, true));
