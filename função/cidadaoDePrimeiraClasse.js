@@ -14,3 +14,11 @@ function run(fun){
 }
 
 run(function(){ console.log("bala"); })
+
+function soma(a,b){
+    return function(c){
+        console.log(a+b+c);
+    }
+}
+
+soma(1,3)(5)
