@@ -1,21 +1,21 @@
-class pessoa{
-    constructor(nome){
+class Pessoa {
+    constructor(nome) {
         this.nome = nome
     }
 
-    falar(){
-        console.log(`Meu nome é ${this.nome}`);
+    falar() {
+        console.log(`Meu nome é ${this.nome}`)
     }
 }
 
-const p1 = new pessoa('Roberto')
+const p1 = new Pessoa('João')
 p1.falar()
 
-const pessoa = nome =>{
-    return{
+const criarPessoa = nome => {
+    return {
         falar: () => console.log(`Meu nome é ${nome}`)
     }
 }
 
-const p2 = new Pessoa('Roberto')
+const p2 = criarPessoa('João')
 p2.falar()
