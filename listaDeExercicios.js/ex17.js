@@ -6,11 +6,11 @@ function calcAumentoDeSalario(plano,salario){
             console.log(`Novo salario do funcionario: ${novoSalario}`);
             break;
         case 'B':
-            novoSalario = salario + (salario*20/100)
+            novoSalario = salario + (salario*15/100)
             console.log(`Novo salario do funcionario: ${novoSalario}`);
             break
         case 'C':
-            novoSalario = salario + (salario*30/100)
+            novoSalario = salario + (salario*20/100)
             console.log(`Novo salario do funcionario: ${novoSalario}`);
             break
         default:
