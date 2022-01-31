@@ -10,4 +10,4 @@ console.log(contadorB.valor);
 
 contadorC.inc()
 contadorC.inc()
-console.log(contadorD.valor);
+console.log(contadorC.valor,contadorD.valor);
