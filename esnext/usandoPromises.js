@@ -1,5 +1,4 @@
 const http = require('http')
-const { get } = require('lodash')
 
 const getTurma = letra =>{
     const url = `http://files.cod3r.com.br/curso-js/turma${letra}.json`
@@ -39,5 +38,5 @@ Promise.all([getTurma('A'),getTurma('B'),getTurma('C')])
     .then(alunos => alunos.map(aluno => aluno.nome))
     .then(nomes => console.log(nomes))
     .catch(e => console.log(e.message))
-    
+
 getTurma('D').catch(e => console.log(e.message))
