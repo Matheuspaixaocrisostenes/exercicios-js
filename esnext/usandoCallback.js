@@ -26,4 +26,3 @@ getTurma('A',alunos =>{
         })
     })
 })
-
