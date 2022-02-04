@@ -2,7 +2,7 @@ for(let letra of 'cod3r'){
     console.log(letra);
 }
 
-const assuntosEcma = ['Map','Set','Pormise']
+const assuntosEcma = ['Map','Set','Promise']
 
 for(let i in assuntosEcma){
     console.log(i);
@@ -15,7 +15,7 @@ for(let assunto of assuntosEcma){
 const assuntoMap = new Map([
     ['Map', {abordado: true}],
     ['Set', {abordado:true}],
-    ['Promisse', {abordado: false}]
+    ['Promise', {abordado: false}]
 ])
 
 for(let assunto of assuntoMap){
