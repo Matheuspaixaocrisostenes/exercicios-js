@@ -1,9 +1,10 @@
 <h1>Formulário</h1>
 
 <form method="POST">
-    <input type="text" name="name">
-    <input type="password" name="senha">
-    <textarea name="bio" cols="30" rows="10"></textarea>
+    <input type="hidden" name="id" value="3">
+    <input type="text" name="name" placeholder="Nome">
+    <input type="password" name="senha" placeholder="Senha">
+    <textarea name="bio" cols="30" rows="10" placeholder="Biografia"></textarea>
     <div>
         <input type="radio" name="tipo" value="admin">Admin
         <input type="radio" name="tipo" value="regular">Regular
@@ -19,16 +20,17 @@
         <option value="ce">Ceará</option>
     </select>
 
-    <select name="interesses">
-        <option value="">selecione</option>
+    <select name="interesses" multiple size="7">
         <option value="js">Javascript</option>
-        <option value="Java">Java</option>
-        <option value="php">Php</option>
+        <option value="java">Java</option>
+        <option value="php">PHP</option>
         <option value="python">Python</option>
         <option value="go">Go</option>
         <option value="c">C</option>
     </select>
+    
     <button formaction="http://localhost:3003/usuarios">Incluir</button>
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
 </form>
 
 <style>
