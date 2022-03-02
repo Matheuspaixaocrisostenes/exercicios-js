@@ -1,0 +1,58 @@
+<video id="meuVideo" width="800" height="450" controls autoplay controlsList="nodownload">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+    Seu browser não suporta a tag de vídeo.
+</video>
+
+<div wm-progresso="meuVideo" class="progresso">
+    <div></div>
+    <progress id="progress" max="100" value="0"> Progresso </progress>
+</div>
+
+<div>
+    <button wm-play="meuVideo" onclick="darPlay()">Play</button>
+    <button wm-pause="meuVideo" onclick="darPause()">Pause</button>
+</div>
+
+<style>
+    /* .progresso{
+        height: 20px;
+        width: 500px;
+        border: 1px solid #444;
+        margin: 20px;
+    }
+
+    .progresso > div{
+        background-color: red;
+        color: #fff;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+    } */
+   
+    progress{
+        width: 500px;
+        height: 20px;
+        margin: 20px;
+    }
+</style>
+
+<script>
+    const vid = document.getElementById('meuVideo')
+    const progress = document.getElementById("progress");
+
+    function darPlay(){
+        vid.play()
+    }
+    function darPause(){
+        vid.pause()
+    }
+
+    function progressLoop() {
+        setInterval(function () {
+        progress.value = Math.round((vid.currentTime / vid.duration) * 100);
+        });
+    }
+  
+    progressLoop();
+</script>
