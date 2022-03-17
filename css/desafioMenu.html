@@ -7,7 +7,87 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(173, 173, 173);
+            font-family: 'Oswald';
+        }
+        header{
+            background-color: rgb(58, 58, 58);
+            border-bottom: solid 2px skyblue;
+        }
+
+        .logo img{
+            width: 250px;
+            padding: 10px;
+        }
+
+        .menu-toggle{
+            display: none;
+            float: right;
+            margin-top: -50px;
+            margin-right: 15px;
+            font-size: 10px;
+            background-color: gray;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu ul{
+            position: absolute;
+            margin-top: -45px;
+            margin-left: 290px;
+        }
+
+        .menu ul li{
+            display: inline;
+            font-size: 20px;
+        }
+        
+        .menu ul li a{
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .menu ul li a:hover{
+            background-color: skyblue;
+            color: black;
+        }
+
+        .autenticacao{
+            float: right;
+            margin-top: -50px;
+            margin-right: 20px;
+        }
+
+        .autenticacao a{
+            text-decoration: none;
+            color: #fff;
+            padding: 9px;
+        }
+
+        .destaque{
+            background-color: red;
+            border-radius: 40px;
+        }
+
+        @media(max-width: 750px){
+            .autenticacao{
+                display: none;
+            }
+        }
+
+        @media(max-width: 600px){
+            .menu{ display: none;}
+            .menu-toggle{ display: block;}
+        }
     </style>
 </head>
 
