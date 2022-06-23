@@ -3,6 +3,6 @@ export default function hendler(req, res){
     res.status(200).json({
         id: codigo,
         nome: `Maria ${codigo}`,
-        idade: `mariamaria${codigo}@xcfmail.com`
+        email: `mariamaria${codigo}@xcfmail.com`
     })
 }
