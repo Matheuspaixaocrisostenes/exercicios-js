@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 350px;
+            width: 350px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,115,0.865983893557423) 35%, rgba(0,212,255,1) 100%);
+        }
+
+        input{
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Digite seu nome:" id="name">
+        <button onclick="contLetras()">Click</button>
+    </div>
+    <script>
+        function contLetras(){
+            let name = document.getElementById('name').value
+            let caractere = name.split('')
+            alert(`A quantidade de letras digitadas são ${caractere.length}`);
+        }
+    </script>
+</body>
+</html>
