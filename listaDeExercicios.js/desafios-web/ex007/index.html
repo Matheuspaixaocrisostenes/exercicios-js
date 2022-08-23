@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true " alt="lampada" onmouseout="volta()" onmouseenter="muda()" id="lamp">
+    </div>
+    <script>
+        const lampada = document.getElementById('lamp')
+        function muda(){
+            lampada.src = `https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada-on.jpg?raw=true`
+        }
+
+        function volta(){
+            lampada.src = `https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true`
+        }
+    </script>
+</body>
+</html>
