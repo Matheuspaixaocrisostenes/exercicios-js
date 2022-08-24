@@ -29,13 +29,13 @@
     <script>
         function soma(){
             const num1 = document.getElementById('num1').value
-            Number(num1)
+            const novoNum1 = Number(num1)
             const num2 = document.getElementById('num2').value
-            Number(num2)
+            const novoNum2 = Number(num2)
             const res = document.getElementById('res')
 
-            let result = Number(num1)
-            res.innerHTML = result + 1
+            let result = novoNum1 + novoNum2
+            res.innerHTML = result
         }
     </script>
 </body>
