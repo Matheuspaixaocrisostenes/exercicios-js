@@ -16,9 +16,14 @@
     </div>
     <script>
         function add(){
+            let arr = []
             const prod = document.getElementById('prod').value
             const list = document.getElementById('list')
-            list.innerHTML += `<li>${prod}</li>`
+            arr.push(prod)
+            arr.forEach(element => {
+                list.innerHTML += `<li>${element}</li>`
+            });
+            
         }
     </script>
 </body>
