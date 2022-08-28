@@ -8,17 +8,20 @@
 </head>
 <body>
     <div>
+        <button onclick="show()">Clique para mostrar</button>
         <ul id="list">
             
         </ul>
     </div>
 
     <script>
+        function show(){
             var deuses = ['Aegir', 'Aud', 'Balder', 'Bragi', 'Búri', 'Dag', 'Dellingr']
             let ul = document.getElementById('list')
             deuses.forEach(element => {
                 ul.innerHTML += `<li>${element}</li>`
             });
+        }
     </script>
 </body>
 </html>
