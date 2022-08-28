@@ -21,11 +21,6 @@
             const list = document.getElementById('list')
             arr.push(prod)
             arr.forEach(element => {
-                if(element.keys % 2 == 0){
-                    list.innerHTML += `<li><strong>${element}</strong></li>`
-                }
-            });
-            arr.forEach(element => {
                 list.innerHTML += `<li>${element}</li>`
             });
         }
