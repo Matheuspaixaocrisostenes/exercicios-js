@@ -5,3 +5,10 @@ CREATE TABLE IF NOT EXISTS empresas (
     PRIMARY KEY (id),
     UNIQUE KEY (cnpj)
 );
+
+CREATE TABLE IF NOT EXISTS empresas_unidades (
+    empresas_id INT UNSIGNED NOT NULL,
+    cidades_id INT UNSIGNED NOT NULL,
+    sede TINYINT(1) NOT NULL,
+    PRIMARY KEY (empresas_id, cidades_id)
+);
