@@ -1,7 +1,13 @@
 const express = require('express')
 const app = express()
 
-app.get('/opa',(req, res) =>{
+app.use((req, res, next) => {
+    console.log('Antes....')
+    next()
+})
+
+app.get('/opa',(req, res, next) =>{
+    console.log('Durante...')
     res.json({
         data: [
             {id: 7, name: 'Ana', position: 1 },
@@ -13,14 +19,20 @@ app.get('/opa',(req, res) =>{
         limit: 3,
         status: 200
     })
-
+    
+    next()
+    
     // res.json({
-    //     name: 'Ipad 32Gb',
-    //     price: 1899.00,
-    //     discount: 0.12
-    // })
-
-    // res.send('<h1>Estou Bem!</h1><br/><br/> <h2>Tipo é HTML</h2>')
+        //     name: 'Ipad 32Gb',
+        //     price: 1899.00,
+        //     discount: 0.12
+        // })
+        
+        // res.send('<h1>Estou Bem!</h1><br/><br/> <h2>Tipo é HTML</h2>')
+    })
+    
+app.use((req, res) => {
+    console.log('Depois....')
 })
 
 app.listen(3000, () =>{
