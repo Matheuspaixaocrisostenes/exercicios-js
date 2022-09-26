@@ -6,6 +6,8 @@ const saudacao = require('./saudacaoMid')
 
 const usuarioApi = require('./api/usuario')
 
+require('./api/produto')(app,'Com param!')
+
 app.post('/usuario', usuarioApi.salvar)
 app.get('/usuario', usuarioApi.obter)
 
