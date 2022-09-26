@@ -4,6 +4,11 @@ const bodyParser = require('body-parser')
 
 const saudacao = require('./saudacaoMid')
 
+const usuarioApi = require('./api/usuario')
+
+app.post('/usuario', usuarioApi.salvar)
+app.get('/usuario', usuarioApi.obter)
+
 app.use(bodyParser.text())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
