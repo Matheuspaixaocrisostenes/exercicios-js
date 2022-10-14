@@ -15,7 +15,7 @@ module.exports = app => {
         if (!user) return res.status(400).send('Usuário não encontrado!')
 
         const isMatch = bcrypt.compareSync(req.body.password, user.password)
-        if(!isMatch) return res.status(401).send('Email / Senha inválidos!')
+        if (!isMatch) return res.status(401).send('Email/Senha inválidos!')
 
         const now = Math.floor(Date.now() / 1000)
 
@@ -36,15 +36,15 @@ module.exports = app => {
 
     const validateToken = async (req, res) => {
         const userData = req.body || null
-        try{
-            if(userData){
+        try {
+            if(userData) {
                 const token = jwt.decode(userData.token, authSecret)
-                if(new Date(token.exp * 1000) > new Date()){
+                if(new Date(token.exp * 1000) > new Date()) {
                     return res.send(true)
                 }
             }
-        }catch(e){
-            // Problema com o token
+        } catch(e) {
+            // problema com o token
         }
 
         res.send(false)
