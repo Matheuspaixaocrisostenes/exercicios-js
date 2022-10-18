@@ -4,15 +4,20 @@
             <i class="fa fa-lg" :class="icon"></i>
         </a>
         <h1 class="title">{{ title }}</h1>
+        <user-dropdown v-if="!hideUserDropdown" />
     </header>
 </template>
 
 <script>
+import UserDropdown from './UserDropdown'
+
 export default {
     name: 'Header',
+    components: { UserDropdown },
     props: {
         title: String,
-        hideToggle: Boolean
+        hideToggle: Boolean,
+        hideUserDropdown: Boolean
     },
     computed: {
         icon(){
@@ -63,6 +68,7 @@ export default {
     }
 
     header.header > a.toggle:hover{
+        color: #fff;
         background-color: rgba(0,0,0,0.2);
     }
 </style>
