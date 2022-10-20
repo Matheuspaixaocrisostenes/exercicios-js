@@ -6,7 +6,7 @@
         <h1 class="title">
             <router-link to="/">{{ title }}</router-link>
         </h1>
-        <user-dropdown v-if="!hideUserDropdown" />
+        <UserDropdown v-if="!hideUserDropdown" />
     </header>
 </template>
 
@@ -22,20 +22,20 @@ export default {
         hideUserDropdown: Boolean
     },
     computed: {
-        icon(){
+        icon() {
             return this.$store.state.isMenuVisible ? "fa-angle-left" : "fa-angle-down"
         }
     },
     methods: {
-        toggleMenu(){
-            this.$store.commit('toggleMenu')            
+        toggleMenu() {
+            this.$store.commit('toggleMenu')
         }
     }
 }
 </script>
 
 <style>
-    .header{
+    .header {
         grid-area: header;
         background: linear-gradient(to right, #1e469a, #49a7c1);
 
@@ -44,7 +44,7 @@ export default {
         align-items: center;
     }
 
-    .title{
+    .title {
         font-size: 1.2rem;
         color: #fff;
         font-weight: 100;
@@ -52,17 +52,17 @@ export default {
         text-align: center;
     }
 
-    .title a{
-        color: #fff;
+    .title a {
+        color: #FFF;
         text-decoration: none;
     }
 
-    .title a:hover{
-        color: #fff;
+    .title a:hover {
+        color: #FFF;
         text-decoration: none;
     }
 
-    header.header > a.toggle{
+    header.header > a.toggle {
         width: 60px;
         height: 100%;
         color: #fff;
@@ -74,8 +74,8 @@ export default {
         align-items: center;
     }
 
-    header.header > a.toggle:hover{
+    header.header > a.toggle:hover {
         color: #fff;
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0, 0, 0, 0.2);
     }
 </style>

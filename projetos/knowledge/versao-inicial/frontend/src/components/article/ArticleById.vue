@@ -11,6 +11,7 @@ import hljs from 'highlightjs/highlight.pack.js'
 import { baseApiUrl } from '@/global'
 import axios from 'axios'
 import PageTitle from '../template/PageTitle'
+
 export default {
     name: 'ArticleById',
     components: { PageTitle },
@@ -37,6 +38,7 @@ export default {
         border-radius: 8px;
         padding: 25px;
     }
+
     .article-content pre {
         padding: 20px;
         border-radius: 8px;
@@ -44,9 +46,11 @@ export default {
         background-color: #1e1e1e;
         color: #FFF;
     }
+
     .article-content img {
         max-width: 100%;
     }
+
     .article-content :last-child {
         margin-bottom: 0px;
     }

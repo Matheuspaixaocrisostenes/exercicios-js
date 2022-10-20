@@ -40,6 +40,7 @@
 <script>
 import { baseApiUrl, showError } from '@/global'
 import axios from 'axios'
+
 export default {
     name: 'CategoryAdmin',
     data: function() {
@@ -101,4 +102,5 @@ export default {
 </script>
 
 <style>
+
 </style>

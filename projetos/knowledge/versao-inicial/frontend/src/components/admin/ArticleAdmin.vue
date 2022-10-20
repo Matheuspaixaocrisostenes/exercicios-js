@@ -61,6 +61,7 @@
 import { VueEditor } from "vue2-editor"
 import { baseApiUrl, showError } from '@/global'
 import axios from 'axios'
+
 export default {
     name: 'ArticleAdmin',
     components: { VueEditor },
@@ -151,4 +152,5 @@ export default {
 </script>
 
 <style>
+
 </style>

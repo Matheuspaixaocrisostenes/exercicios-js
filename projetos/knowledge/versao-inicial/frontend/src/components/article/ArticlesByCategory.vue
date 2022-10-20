@@ -20,6 +20,7 @@ import { baseApiUrl } from '@/global'
 import axios from 'axios'
 import PageTitle from '../template/PageTitle'
 import ArticleItem from './ArticleItem'
+
 export default {
     name: 'ArticlesByCategory',
     components: { PageTitle, ArticleItem },
@@ -41,6 +42,7 @@ export default {
             axios(url).then(res => {
                 this.articles = this.articles.concat(res.data)
                 this.page++
+
                 if(res.data.length === 0) this.loadMore = false
             })
         }
@@ -51,6 +53,7 @@ export default {
             this.articles = []
             this.page = 1
             this.loadMore = true
+
             this.getCategory()
             this.getArticles()
         }
@@ -68,6 +71,7 @@ export default {
         list-style-type: none;
         padding: 0px;
     }
+
     .articles-by-category .load-more {
         display: flex;
         flex-direction: column;

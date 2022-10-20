@@ -68,6 +68,7 @@
 <script>
 import { baseApiUrl, showError } from '@/global'
 import axios from 'axios'
+
 export default {
     name: 'UserAdmin',
     data: function() {
@@ -128,4 +129,5 @@ export default {
 </script>
 
 <style>
+
 </style>
